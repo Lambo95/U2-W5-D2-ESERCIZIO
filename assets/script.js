@@ -1,4 +1,7 @@
-let portafoglio = prompt("Quanti soldi hai per le spese online?");
+let portafoglio = parseInt(prompt("Quanti soldi hai per le spese online?"));
+if (portafoglio === null || portafoglio(isNaN)) {
+  portafoglio = parseInt(prompt("Devi inserire un numero!"));
+}
 let arrayAcquisti = [];
 
 function addAcquisti() {
@@ -6,10 +9,17 @@ function addAcquisti() {
   let merce = prompt("Cosa vuoi acquistare?");
   if (merce === null) {
     alert("Devi aggiungere un elemento!");
-  } else {
+  } else if (portafoglio > 10) {
     arrayAcquisti.push(merce);
-    console.log(arrayAcquisti);
+    portafoglio -= 10;
     document.getElementById("msg-acquisto").innerHTML = `Hai acquistato ${merce} per 10€`;
+    document.getElementById("saldo").innerHTML = `Il tuo saldo è di: ${portafoglio}`;
+  } else {
+    let url = "./assets/broke-poor.gif";
+    let image = new Image();
+    image.src = url;
+    document.getElementById("saldo").innerHTML = `Hai finito i soldi!!`;
+    document.getElementById("hai-finito-i-soldi").appendChild(image);
   }
 }
 
@@ -26,11 +36,10 @@ function carrello() {
   }
 }
 
-function saldoPortafoglio() {
-  if (parseInt(portafoglio) > 10) {
-    let saldo = parseInt(portafoglio) - 10;
-    document.getElementById("saldo").innerHTML = `Il tuo saldo è di: ${saldo}`;
-  } else {
-    document.getElementById("hai-finito-i-soldi").innerHTML = `Hai finito i soldi`;
-  }
-}
+// function saldoPortafoglio(portafoglio) {
+//   if (parseInt(portafoglio) > 10) {
+//     document.getElementById("saldo").innerHTML = `Il tuo saldo è di: ${saldo}`;
+//   } else {
+//     document.getElementById("hai-finito-i-soldi").innerHTML = `Hai finito i soldi`;
+//   }
+// }
