@@ -36,6 +36,8 @@ h1 {
 }
 
 #hai-finito-i-soldi {
+  background-image: url(./media/broke-poor.gif);
+  display: none;
   height: 50vh;
   width: 50vw;
   background-repeat: no-repeat;

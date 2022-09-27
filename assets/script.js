@@ -14,11 +14,11 @@ function addAcquisti() {
     document.getElementById("msg-acquisto").innerHTML = `Hai acquistato ${merce} per 10€`;
     document.getElementById("saldo").innerHTML = `Il tuo saldo è di: ${portafoglio}`;
   } else {
-    let url = "./assets/broke-poor.gif";
-    let image = new Image();
-    image.src = url;
     document.getElementById("saldo").innerHTML = `Hai finito i soldi!!`;
-    document.getElementById("hai-finito-i-soldi").appendChild(image);
+    document.getElementById("hai-finito-i-soldi").style.display = "block";
+    document.getElementById("hai-finito-i-soldi").style.position = "absolute";
+    document.getElementById("hai-finito-i-soldi").style.top = "25%";
+    document.getElementById("hai-finito-i-soldi").style.left = "30%";
   }
 }
 
