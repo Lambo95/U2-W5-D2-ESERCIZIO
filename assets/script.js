@@ -1,11 +1,10 @@
 let portafoglio = parseInt(prompt("Quanti soldi hai per le spese online?"));
-if (portafoglio === null || portafoglio(isNaN)) {
+while (portafoglio === null || isNaN(portafoglio)) {
   portafoglio = parseInt(prompt("Devi inserire un numero!"));
 }
 let arrayAcquisti = [];
 
 function addAcquisti() {
-  arrayAcquisti;
   let merce = prompt("Cosa vuoi acquistare?");
   if (merce === null) {
     alert("Devi aggiungere un elemento!");
@@ -25,14 +24,15 @@ function addAcquisti() {
 
 function carrello() {
   for (let index = 0; index < arrayAcquisti.length; index++) {
-    arrayAcquisti[index];
+    let element = arrayAcquisti[index];
     let a = document.getElementById("carrello-spesa");
+    a.innerHTML += `<li> ${element} </li>`;
     // if (a.innerHTML === "") {
     //   a.innerHTML = element;
     // } else {
     //   a.innerHTML = element + element;
     // }
-    a.innerHTML = arrayAcquisti[index];
+    // a.innerHTML = arrayAcquisti[index];
   }
 }
 

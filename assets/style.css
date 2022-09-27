@@ -35,6 +35,15 @@ h1 {
   font-weight: bold;
 }
 
+#hai-finito-i-soldi {
+  height: 50vh;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0 auto;
+}
+
 #saldo {
   padding: 0.5rem;
   text-align: center;
