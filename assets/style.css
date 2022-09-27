@@ -1,0 +1,15 @@
+#img-aggiungi-spesa {
+  height: 50vh;
+  width: 50vw;
+  background-image: url(./media/marketplace.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#carrello-spesa {
+  background-image: url(./media/54302312-icona-del-carrello.jpg);
+  height: 50vh;
+  width: 50vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
